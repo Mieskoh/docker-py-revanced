@@ -1,8 +1,13 @@
 # 🤓Docker-Py-ReVanced
 
-A little python script that will help you in building Revanced and Revanced-Extended [apps](#note)
+A little python script that will help you in building Revanced and Revanced-Extended [apps](#note).
 
-Note - I prefer [Revanced Extended](https://github.com/inotia00/revanced-patches/tree/revanced-extended) more
+**`Note`** - If you are a root user and want magisk module (Extended). Get them [here](https://github.com/nikhilbadyal/revanced-magisk-module)
+
+This is just a builder for revanced and not a revanced support. Please be understanding and refraining from asking
+about revanced features/bugs. Discuss those on proper relevant forums(on Revanced GitHub , Discord)
+
+**`Note`** - I prefer [Revanced Extended](https://github.com/inotia00/revanced-patches/tree/revanced-extended) more
 (for YouTube & YouTube Music) hence the YouTube and YouTube Music builds in this repo are from
 Revanced Extended.
 
@@ -16,33 +21,35 @@ You can use any of the following methods to build.
 
 - 🚀In GitHub (**_`Recommended`_**)
 
-    1. Fork the project.<br>
-       <img src="https://i.imgur.com/R5HdByI.png" width="400" style="left"><br>
-    2. Add `ENVS` (**optional**) secret to the repo. Required only if you want to cook specific apps/versions.
+     1. Clik Star to support the project.<br>
+       <img src="https://i.imgur.com/FFyXaWY.png" width="400" style="left"><br>
+     2. Fork the project.<br>
+     <img src="https://i.imgur.com/R5HdByI.png" width="400" style="left"><br>
+     3. Add `ENVS` (**optional**) secret to the repo. Required only if you want to cook specific apps/versions.
+         <details>
+           <summary>🚶Detailed step by step guide</summary>
+
+         - Go to the repo settings and then to actions->secret<br>
+           <img src="https://i.imgur.com/Inj82KK.png" width="600" style="left"><br>
+         - Add Repository secret<br>
+           <img src="https://i.imgur.com/V2Wfx3J.png" width="600" style="left">
+
+        </details>
+
+     4. Go to actions tab. Select `Build & Release`.Click on `Run Workflow`.
+
         <details>
           <summary>🚶Detailed step by step guide</summary>
 
-        - Go to the repo settings and then to actions->secret<br>
-          <img src="https://i.imgur.com/Inj82KK.png" width="600" style="left"><br>
-        - Add Repository secret<br>
-          <img src="https://i.imgur.com/V2Wfx3J.png" width="600" style="left">
+         - Go to actions tab<br>
+           <img src="https://i.imgur.com/XSCvzav.png" width="600" style="left"><br>
+         - Check the status of build, It should look green.<br>
+           <img src="https://i.imgur.com/CsJt9W1.png" width="600" style="left">
 
-       </details>
+        </details>
 
-    3. Go to actions tab. Select `Build & Release`.Click on `Run Workflow`.
-
-       <details>
-         <summary>🚶Detailed step by step guide</summary>
-
-        - Go to actions tab<br>
-          <img src="https://i.imgur.com/XSCvzav.png" width="600" style="left"><br>
-        - Check the status of build, It should look green.<br>
-          <img src="https://i.imgur.com/CsJt9W1.png" width="600" style="left">
-
-       </details>
-
-    4. If the building process is successful, you’ll get your APKs in the <br>
-       <img src="https://i.imgur.com/S5d7qAO.png" width="700" style="left">
+     5. If the building process is successful, you’ll get your APKs in the <br>
+        <img src="https://i.imgur.com/S5d7qAO.png" width="700" style="left">
 
 - 🐳With Docker Compose
   Windows/Mac users simply install Docker Desktop. If using Linux see below
@@ -118,13 +125,27 @@ By default, script build the version as recommended by Revanced team.
 
 1. Supported values for **REVANCED_APPS_NAME** are :
 
-    1. youtube
-    2. youtube_music
-    3. twitter
-    4. reddit
-    5. tiktok
-    6. warnwetter
-    7. spotify
+    1. [youtube](https://www.apkmirror.com/apk/google-inc/youtube/)
+    2. [youtube_music](https://www.apkmirror.com/apk/google-inc/youtube-music/)
+    3. [twitter](https://www.apkmirror.com/apk/twitter-inc/twitter/)
+    4. [reddit](https://www.apkmirror.com/apk/redditinc/reddit/)
+    5. [tiktok](https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly/)
+    6. [warnwetter](https://www.apkmirror.com/apk/deutscher-wetterdienst/warnwetter/)
+    7. [spotify](https://spotify.en.uptodown.com/android)
+    8. [nyx-music-player](https://nyx-music-player.en.uptodown.com/android)
+    9. [icon_pack_studio](https://www.apkmirror.com/apk/smart-launcher-team/icon-pack-studio/)
+    10. [ticktick](https://www.apkmirror.com/apk/appest-inc/ticktick-to-do-list-with-reminder-day-planner/)
+    11. [twitch](https://www.apkmirror.com/apk/twitch-interactive-inc/twitch/)
+    12. [hex-editor](https://m.apkpure.com/hex-editor/com.myprog.hexedit)
+    13. [citra](https://www.apkmirror.com/apk/citra-emulator/citra-emulator/)
+    14. [windy](https://www.apkmirror.com/apk/windy-weather-world-inc/windy-wind-weather-forecast/)
+    15. [my-expenses](https://my-expenses.en.uptodown.com/android)
+    16. [backdrops](https://backdrops.en.uptodown.com/android)
+    17. [expensemanager](https://apksos.com/app/com.ithebk.expensemanager)
+    18. [tasker](https://www.apkmirror.com/apk/joaomgcd/tasker-crafty-apps-eu/)
+
+    <br>Please verify the source of original APKs yourself with links provided. I'm not responsible for any damaged caused.
+    If you know any better/safe source to download clean. Please raise a PR.
 
 2. Remember to download the **_Microg_**. Otherwise, you will not be able to open YouTube.
 3. By default, it will build only `youtube`. To build other apps supported by revanced team.
@@ -167,7 +188,6 @@ By default, script build the version as recommended by Revanced team.
    REDDIT_VERSION=X.X.X
    TIKTOK_VERSION=X.X.X
    WARNWETTER_VERSION=X.X.X
-   SPOTIFY_VERSION=X.X.X
    ```
 6. If you want to build `latest` version, whatever latest is available(including
    beta) .
@@ -186,7 +206,6 @@ By default, script build the version as recommended by Revanced team.
    REDDIT_VERSION=latest
    TIKTOK_VERSION=latest
    WARNWETTER_VERSION=latest
-   SPOTIFY_VERSION=latest
    ```
 
 7. If you don't want to use default keystore. You can provide your own by placing it
@@ -230,7 +249,26 @@ By default, script build the version as recommended by Revanced team.
     fact to define your normal configurations in `.env` file and sometimes if you want to build something different just
     once. Add it in `GitHub secrets`.<br>
     Or you can ignore what I said above and always use `GitHub secrets`.
-13. Sample Envs<br>
+13. If APKMirror or other apk source is blocked in your region or script somehow is unable to download from apkmirror.
+    You can download apk manually from any source. Place them in `/apks` directory and provide environment variable
+    in `.env` file or in `ENVS` in `GitHub secrets`(Recommended) in the format.
+    ```dotenv
+     EXISTING_DOWNLOADED_APKS=<Comma,Seperate,App,Name>
+    ```
+    Example:
+    ```dotenv
+     EXISTING_DOWNLOADED_APKS=youtube,youtube_music
+    ```
+    If you add above. Script will not download the `Youtube` & `youtube music`apk from internet and expects an apk in
+    `/apks` folder.
+
+    Name of the downloaded apk must match with the available app choices found [here.](#note)
+14. If you run script again & again. You might hit GitHub API limit. In that case you can provide your Personal
+    GitHub Access Token in `.env` file or in `ENVS` in `GitHub secrets` (Recommended) in the format -
+    ```dotenv
+     PERSONAL_ACCESS_TOKEN=<PAT>
+    ```
+15. Sample Envs<br>
     <img src="https://i.imgur.com/ajSE5nA.png" width="600" style="left">
 
 Thanks to [@aliharslan0](https://github.com/aliharslan0/pyrevanced) for his work.
